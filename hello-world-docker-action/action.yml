@@ -1,0 +1,11 @@
+name: 'Container Action'
+description: 'Practice with Container actions'
+inputs:
+  who-to-greet:
+    description: 'Input to use'
+    default: 'world'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+    args:
+      - ${{ inputs.who-to-greet }}
